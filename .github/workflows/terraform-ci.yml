@@ -18,7 +18,7 @@ permissions:
 jobs:
 
   call-shared-workflow-readme-generator:
-    uses: prg-github/shared-workflows/.github/workflows/automate-readme.yml@main
+    uses: uncle-sola/shared-workflows/.github/workflows/automate-readme.yml@main
     with:
       working_dir: ./terraform
       output-file: README.md
