@@ -16,6 +16,15 @@ permissions:
   pull-requests: write
 
 jobs:
+
+  call-shared-workflow-readme-generator:
+    uses: prg-github/shared-workflows/.github/workflows/automate-readme.yml@main
+    with:
+      working_dir: ./terraform
+      output-file: README.md
+      output-method: inject
+      git-push: "true"
+      
   terraform:
     runs-on: ubuntu-latest
 
