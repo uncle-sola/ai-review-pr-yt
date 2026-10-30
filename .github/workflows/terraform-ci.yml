@@ -19,7 +19,7 @@ jobs:
     permissions:
       contents: write
       pull-requests: write
-    uses: uncle-sola/shared-workflows/.github/workflows/terraform-ci.yml@main
+    uses: uncle-sola/shared-workflows/.github/workflows/terraform-ci.yml@flatten-readme-job
     secrets:
       TF_API_TOKEN: ${{ secrets.TF_API_TOKEN }}
       CLAUDE_API_KEY: ${{ secrets.CLAUDE_API_KEY }}
