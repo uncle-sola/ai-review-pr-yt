@@ -7,14 +7,14 @@ resource "azurerm_storage_account" "block_storage" {
   account_kind             = "BlockBlobStorage"
 
   min_tls_version = "TLS1_2"
-  public_network_access_enabled   = true
+  public_network_access_enabled   = false
   allow_nested_items_to_be_public = false
 }
 
 resource "azurerm_storage_container" "blocks" {
   name                  = "block-data"
   storage_account_id    = azurerm_storage_account.block_storage.id
-  container_access_type = "container"
+  container_access_type = "private"
 }
 
 # resource "azurerm_private_endpoint" "block_storage" {
