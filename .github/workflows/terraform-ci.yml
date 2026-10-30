@@ -44,8 +44,8 @@ jobs:
       - name: Run tfsec
         run: tfsec .
 
-      # - name: Run Checkov
-      #   uses: bridgecrewio/checkov-action@master
-      #   with:
-      #     directory: terraform
-      #     framework: terraform
+      - name: Run Checkov
+        uses: bridgecrewio/checkov-action@master
+        with:
+          directory: terraform
+          framework: terraform
