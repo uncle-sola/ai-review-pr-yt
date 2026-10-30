@@ -20,7 +20,7 @@ jobs:
   call-shared-workflow-readme-generator:
     uses: uncle-sola/shared-workflows/.github/workflows/automate-readme.yml@main
     with:
-      working_dir: ./terraform
+      working_dir: /terraform
       output-file: README.md
       output-method: inject
       git-push: "true"
