@@ -75,20 +75,20 @@ resource "azurerm_monitor_diagnostic_setting" "blob" {
   }
 }
 
-resource "azurerm_monitor_diagnostic_setting" "queue" {
-  name                       = "diag-queue"
-  target_resource_id         = "${azurerm_storage_account.blob.id}/queueServices/default"
-  log_analytics_workspace_id = azurerm_log_analytics_workspace.logs.id
+# resource "azurerm_monitor_diagnostic_setting" "queue" {
+#   name                       = "diag-queue"
+#   target_resource_id         = "${azurerm_storage_account.blob.id}/queueServices/default"
+#   log_analytics_workspace_id = azurerm_log_analytics_workspace.logs.id
 
-  enabled_log {
-    category = "StorageRead"
-  }
+#   enabled_log {
+#     category = "StorageRead"
+#   }
 
-  enabled_log {
-    category = "StorageWrite"
-  }
+#   enabled_log {
+#     category = "StorageWrite"
+#   }
 
-  enabled_log {
-    category = "StorageDelete"
-  }
-}
+#   enabled_log {
+#     category = "StorageDelete"
+#   }
+# }
