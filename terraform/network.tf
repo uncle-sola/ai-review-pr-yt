@@ -1,6 +1,6 @@
 resource "azurerm_resource_group" "rg" {
   name     = "rg-network-demo-ai"
-  location = "UK South"
+  location = var.location
 }
 
 resource "azurerm_virtual_network" "vnet" {
