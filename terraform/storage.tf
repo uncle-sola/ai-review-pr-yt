@@ -1,10 +1,10 @@
-resource "azurerm_storage_account" "block_storage" {
-  name                     = "blobfatherblock007"
+resource "azurerm_storage_account" "blob" {
+  name                     = "aireviewblobdemo01"
   resource_group_name      = azurerm_resource_group.rg.name
   location                 = azurerm_resource_group.rg.location
-  account_tier             = "Premium"
-  account_replication_type = "ZRS"
-  account_kind             = "BlockBlobStorage"
+  account_tier             = "Standard"
+  account_replication_type = "LRS"
+  account_kind             = "StorageV2"
 
   min_tls_version = "TLS1_2"
   public_network_access_enabled   = false
