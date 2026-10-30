@@ -7,9 +7,7 @@ terraform {
     workspaces {
       name = "ai-review-pr-yt"
     }
-
   }
-
 }
 
 provider "azurerm" {
