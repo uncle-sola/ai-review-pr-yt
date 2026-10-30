@@ -15,7 +15,7 @@ resource "azurerm_storage_account" "blob" {
   default_to_oauth_authentication = true
 
   sas_policy {
-    expiration_period = "00.03:00:00"
+    expiration_period = "00.01:00:00"
   }
 
   blob_properties {
