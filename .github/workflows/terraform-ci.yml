@@ -4,12 +4,14 @@ on:
   pull_request:
     paths:
       - "terraform/**"
+      - ".github/workflows/**"
 
   push:
     branches:
       - main
     paths:
       - "terraform/**"
+      - ".github/workflows/**"
 
 jobs:
 
