@@ -18,3 +18,15 @@ resource "azurerm_subnet" "subnet" {
   virtual_network_name = azurerm_virtual_network.vnet.name
   address_prefixes     = ["10.12.1.0/24"]
 }
+
+resource "azurerm_private_dns_zone" "blob" {
+  name                = "privatelink.blob.core.windows.net"
+  resource_group_name = azurerm_resource_group.rg.name
+}
+
+resource "azurerm_private_dns_zone_virtual_network_link" "blob" {
+  name                  = "blob-vnet-link"
+  resource_group_name   = azurerm_resource_group.rg.name
+  private_dns_zone_name = azurerm_private_dns_zone.blob.name
+  virtual_network_id    = azurerm_virtual_network.vnet.id
+}
